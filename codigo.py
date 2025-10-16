@@ -13,15 +13,15 @@ palabra_clave = input("Ingrese palabra clave: ").strip().lower() #no confunde el
 
 with open(nombre_archivo, 'r') as archivo:
     for linea in archivo:
-        # Verificar si la palabra clave está en la línea (sin distinguir mayúsculas/minúsculas)
+        # Verifica si la palabra clave está en la línea 
         if palabra_clave in linea.lower():
             print(f"Línea encontrada: {linea.strip()}")
 
             # Preguntar si desea continuar
-            continuar = input("¿Desea continuar buscando? (s/n): ").strip().lower() #no confunde si ingresa N o n
+            continuar = input("¿Desea continuar buscando? (s/n): ").lower() #no confunde si ingresa N o n
             if continuar == 'n':
                 print("Búsqueda terminada por el usuario.")
                 break
     else:
         # Este bloque se ejecuta si el ciclo for termina sin usar 'break'
-        print("Búsqueda terminada. No hay más coincidencias.")
+        print("Búsqueda terminada, no existe palabra clave en texto")
