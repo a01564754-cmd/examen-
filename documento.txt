@@ -1,0 +1,3 @@
+El ingeniero estudia Python.
+La carrera es desafiante.
+Python es fundamental en IA.
